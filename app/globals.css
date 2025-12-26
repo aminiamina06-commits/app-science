@@ -1,0 +1,24 @@
+@import "tailwindcss";
+
+/* Configuration manuelle pour forcer le design sans erreur */
+@layer base {
+  :root {
+    --background: 255 255 255;
+    --foreground: 15 23 42;
+  }
+
+  body {
+    background-color: white !important;
+    color: #0f172a !important;
+    margin: 0;
+    font-family: system-ui, -apple-system, sans-serif;
+  }
+}
+
+/* On force le blanc même si l'utilisateur est en mode sombre sur Windows */
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: white !important;
+    color: #0f172a !important;
+  }
+}
